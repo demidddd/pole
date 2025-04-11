@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>5 задание - Поле чудес</title>
+	<style type="text/css">
+		/* Главный див */
+		.container {
+			width: 600px;
+		}
+		/* класс для правильной буквы 1 */
+		.letter1 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 2 */
+		.letter2 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 3 */
+		.letter3 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 4 */
+		.letter4 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 5 */
+		.letter5 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 6 */
+		.letter6 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* авт. отступы */
+		.mx-auto {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		/* DISPLAY FLEX */
+		.d-flex {
+			display: flex;
+		}
+		/* ШРИФТ Arial */
+		.ff-arial {
+			font-family: Arial;
+		}
+		/* фон светло-серый, почти белый */
+		.bg-light {
+			background-color: #f8f9fa;
+		}
+		/* фон желтый */
+		.bg-warning {
+			background-color: #ffc107;
+		}
+		/* ведущий Якубович */
+		.yakubovich {
+			background-image: url(1.png);
+			background-size: 100% 100%;
+			width: 400px;
+			height: 400px;
+			position: absolute;
+			left: 0px;
+			top: 400px;
+		}
+	</style>
+</head>
+<body class="ff-arial">
+	<!-- Вопрос -->
+	<div class="bg-warning container mx-auto">
+		Этот струнный инструмент используют во многих стилях и направлениях музыки. Значительный вклад в музыкальную индустрию этот инструмент внес к середине 20 века.
+	</div>
+	<!-- Главный див -->
+	<div class="container mx-auto d-flex bg-light">
+		<div class="letter1">
+			<h1>Г</h1>
+		</div>
+		<div class="letter2">
+			<h1>И</h1>
+		</div>
+		<div class="letter3">
+			<h1>Т</h1>
+		</div>
+		<div class="letter4">
+			<h1>А</h1>
+		</div>
+		<div class="letter5">
+			<h1>Р</h1>
+		</div>
+		<div class="letter6">
+			<h1>А</h1>
+		</div>
+	</div>
+	<!-- Добавьте классы для букв сами -->
+	<span class="a">A</span>
+	<span>Б</span>
+	<span>В</span>
+	<span class="g">Г</span>
+	<span class="d">Д</span>		
+	<span>Е</span>	
+	<span>Ё</span>
+	<span>Ж</span>
+	<span>З</span>
+	<span class="i">И</span>
+	<span>Й</span>
+	<span>К</span>
+	<span>Л</span>
+	<span class="m">М</span>
+	<span>Н</span>
+	<span>О</span>
+	<span>П</span>
+	<span class="r">Р</span>
+	<span class="c">С</span>
+	<span class="t">Т</span>
+	<span>У</span>
+	<span>Ф</span>
+	<span>Х</span>
+	<span>Ц</span>
+	<span>Ч</span>
+	<span>Ш</span>
+	<span>Щ</span>
+	<span>Ъ</span>
+	<span>Ы</span>
+	<span>Ь</span>
+	<span>Э</span>
+	<span>Ю</span>
+	<span>Я</span>
+	<!-- ведущий -->
+	<div class="yakubovich">
+	</div>
+	<script type="text/javascript">
+		/* Создай игру "Поле чудес".
+		1. Когда кликаешь на правильную букву алфавита, то открывается буква в слове.
+		2. Когда кликаешь на неправильную букву алфавита, то выходит всплывающее окно 'Неверно!'.
+		Вначале сделай, так чтобы работали клики на правильные буквы. Потом сделай, так чтобы работали клики на 1-2 неправильные буквы. На все 33 буквы алфавита, можно не делать. */
+		let num = 0
+		document.querySelector(".g").onclick = function(){
+			document.querySelector(".letter1").style.background = "white"
+			num=num+1
+			if (num==6 ) {
+				alert("ты выйграл!")
+			}
+
+		}
+		document.querySelector(".i").onclick = function(){
+			document.querySelector(".letter2").style.background = "white"
+			num=num+1
+			if (num==6 ) {
+				alert("ты выйграл!")
+			}
+		}
+		document.querySelector(".t").onclick = function(){
+			document.querySelector(".letter3").style.background = "white"
+			num=num+1
+			if (num==6 ) {
+				alert("ты выйграл!")
+			}
+		}
+		document.querySelector(".a").onclick = function(){
+			document.querySelector(".letter4").style.background = "white"
+			document.querySelector(".letter6").style.background = "white"
+			num=num+2
+			if (num==6 ) {
+				alert("ты выйграл!")
+			}
+
+		}
+
+		document.querySelector(".r").onclick = function(){
+			document.querySelector(".letter5").style.background = "white"
+			num=num+1
+			if (num==6 ) {
+				alert("ты выйграл!")
+			}
+		}
+
+		document.querySelector(".m").onclick = function(){
+			alert("не правильно")
+		}
+
+		document.querySelector(".c").onclick = function(){
+			alert("не правильно")
+		}
+
+		document.querySelector(".d").onclick = function(){
+			alert("не правильно")
+		}
+
+
+
+	</script>
+</body>
+</html>
